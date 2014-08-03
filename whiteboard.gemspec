@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Whiteboard::VERSION
   spec.authors       = ["Nathan Bashaw"]
   spec.email         = ["nbashaw@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{An intellectually satisfying way to start new rails apps.}
+  spec.homepage      = "http://github.com/nbashaw/whiteboard"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
