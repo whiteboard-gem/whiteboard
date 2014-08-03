@@ -136,7 +136,7 @@ module Whiteboard
         cmd += " --skip-test-unit" if @skip_test_unit
         queue_cmd cmd
       else
-        raise "You need to specify an app name"
+        raise "You need to specify your app's name."
       end
     end
 
@@ -151,7 +151,7 @@ module Whiteboard
     end
 
     def add_gems!
-      raise 'You can\'t skip the gemfile AND specify gems.' if @skip_gemfile
+      raise 'You can\'t skip the Gemfile AND specify gems.' if @skip_gemfile
       @gemlist.each do |g|
         if g.is_a? String
           queue_cmd "echo 'gem \"#{g}\"' >> #{@app_name}/Gemfile"
@@ -232,7 +232,7 @@ module Whiteboard
       if action_list.is_a? Array
         @action_list = action_list
       else
-        raise 'The controller action should be in an array'
+        raise 'The controller action must be in an array.'
       end
     end
 
