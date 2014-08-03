@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 
 require 'whiteboard'
+require 'whiteboard/example'
+include Whiteboard::CLI
 
 case ARGV[0]
 when "new"
-  # system "touch Whiteboard"
-  txt = File.read('whiteboard/example.rb')
-  # File.open('Whiteboard', 'w') { |file| file.write(txt) }
+  system "touch Whiteboard"
+  File.open('Whiteboard', 'w') { |file| file.write(file_string) }
 when "run"
   puts "Generating your app based on your Whiteboard file"
 end
