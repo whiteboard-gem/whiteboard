@@ -1,20 +1,3 @@
-# Whiteboard
-
-An intellectually satisfying way to start new rails projects. Figure out the basics of your app in a file, then run it to generate a basic rails skeleton with all the config options, gems, models, views, and controllers you want.
-
-## Installation
-
-It's simple.
-
-    $ gem install whiteboard
-
-## Usage
-
-Run `whiteboard new` to generate a sample `.whiteboard` file. Edit that file then run `whiteboard` to generate your app.
-
-## Example Whiteboard file
-
-```ruby
 require "whiteboard"
 include Whiteboard
 
@@ -54,12 +37,3 @@ Whiteboard::Controller.new do |c|
   c.name 'Users'
   c.actions [:index, :new, :show]
 end
-```
-
-## Contributing
-
-1. Fork it ( https://github.com/nbashaw/whiteboard/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request

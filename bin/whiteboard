@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'whiteboard'
+
+case ARGV[0]
+when "new"
+  system "touch Whiteboard"
+when "run"
+  puts "Generating your app based on your Whiteboard file"
+end
