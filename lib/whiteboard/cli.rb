@@ -1,20 +1,10 @@
-# Whiteboard
+include Whiteboard
 
-An intellectually satisfying way to start new rails projects. Figure out the basics of your app in a file, then run it to generate a basic rails skeleton with all the config options, gems, models, views, and controllers you want.
+module Whiteboard
+  module CLI
 
-## Installation
-
-It's simple.
-
-    $ gem install whiteboard
-
-## Usage
-
-Run `$ whiteboard new` to generate a sample `Whiteboard` file. Edit that file then run `$ whiteboard` to generate your app.
-
-## Example Whiteboard file
-
-```ruby
+  def file_string
+<<-eos
 require "whiteboard"
 include Whiteboard
 
@@ -26,7 +16,7 @@ Whiteboard::App.new do |app|
   # app.skip_bundle!                            # skip individual options
   # app.skip! ['git', 'test-unit']              # skip multiple things
   app.database 'postgresql'                   # defaults to sqlite, possible options are
-                                              # sqlite3, mysql, or postgresql
+                                              # the rails defaults (not mongo, unfortunately)
   app.ruby_version '2.1.2'                    # generates .ruby-version file
   app.ruby_gemset 'testapp-gemset'            # generates .ruby-gemset file
   app.gems ['omniauth', 'omniauth-twitter']   # appends to Gemfile
@@ -54,12 +44,8 @@ Whiteboard::Controller.new do |c|
   c.name 'Users'
   c.actions [:index, :new, :show]
 end
-```
+eos
+  end
+  end
+end
 
-## Contributing
-
-1. Fork it ( https://github.com/whiteboard-gem/whiteboard/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
