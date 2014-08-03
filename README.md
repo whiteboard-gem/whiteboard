@@ -4,15 +4,7 @@ An intellectually satisfying way to start new rails projects. Figure out the bas
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'whiteboard'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+It's simple.
 
     $ gem install whiteboard
 
