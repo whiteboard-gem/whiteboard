@@ -10,9 +10,9 @@ It's simple.
 
 ## Usage
 
-Run `whiteboard new` to generate a sample `.whiteboard` file. Edit that file then run `whiteboard` to generate your app.
+Run `$ whiteboard new` to generate a sample `Whiteboard` file. Edit that file then run `$ whiteboard` to generate your app.
 
-## Example .whiteboard file
+## Example Whiteboard file
 
 ```ruby
 require "whiteboard"
@@ -26,7 +26,7 @@ Whiteboard::App.new do |app|
   # app.skip_bundle!                            # skip individual options
   # app.skip! ['git', 'test-unit']              # skip multiple things
   app.database 'postgresql'                   # defaults to sqlite, possible options are
-                                              # the rails defaults (not mongo, unfortunately)
+                                              # sqlite3, mysql, or postgresql
   app.ruby_version '2.1.2'                    # generates .ruby-version file
   app.ruby_gemset 'testapp-gemset'            # generates .ruby-gemset file
   app.gems ['omniauth', 'omniauth-twitter']   # appends to Gemfile
