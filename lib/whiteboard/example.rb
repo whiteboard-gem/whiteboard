@@ -1,3 +1,7 @@
+include Whiteboard
+
+str = <<-eos
+
 require "whiteboard"
 include Whiteboard
 
@@ -37,3 +41,4 @@ Whiteboard::Controller.new do |c|
   c.name 'Users'
   c.actions [:index, :new, :show]
 end
+eos

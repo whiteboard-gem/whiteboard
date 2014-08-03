@@ -4,7 +4,9 @@ require 'whiteboard'
 
 case ARGV[0]
 when "new"
-  system "touch Whiteboard"
+  # system "touch Whiteboard"
+  txt = File.read('whiteboard/example.rb')
+  # File.open('Whiteboard', 'w') { |file| file.write(txt) }
 when "run"
   puts "Generating your app based on your Whiteboard file"
 end
