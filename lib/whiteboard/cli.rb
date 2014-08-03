@@ -5,7 +5,6 @@ module Whiteboard
 
   def file_string
 <<-eos
-
 require "whiteboard"
 include Whiteboard
 

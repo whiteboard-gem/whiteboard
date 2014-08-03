@@ -8,6 +8,6 @@ case ARGV[0]
 when "new"
   system "touch Whiteboard"
   File.open('Whiteboard', 'w') { |file| file.write(file_string) }
-when "run"
-  puts "Generating your app based on your Whiteboard file"
+when "run" || "generate" || "g"
+  system "ruby Whiteboard"
 end
