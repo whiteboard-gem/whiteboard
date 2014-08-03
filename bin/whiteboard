@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'whiteboard'
-require 'whiteboard/example'
+require 'whiteboard/cli'
 include Whiteboard::CLI
 
 case ARGV[0]
