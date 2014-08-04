@@ -158,9 +158,9 @@ module Whiteboard
       raise 'You can\'t skip the Gemfile AND specify gems.' if @skip_gemfile
       @gemlist.each do |g|
         if g.is_a? String
-          queue_cmd "echo 'gem \'#{g}\'' >> #{@app_name}/Gemfile"
+          queue_cmd 'echo "gem \''+g+'\'" >> '+@app_name+'/Gemfile'
         elsif g.is_a? Array
-          queue_cmd "echo 'gem \'#{g[0]}\', \'#{g[1]}\'' >> #{@app_name}/Gemfile"
+          queue_cmd 'echo "gem \''+g[0]+'\', \''+g[1]+'\'" >> '+@app_name+'/Gemfile'
         else
           raise "Gem #{g}'s format needs to be a String or an Array."
         end
