@@ -10,15 +10,13 @@ It's simple.
 
 ## Usage
 
-Run `$ whiteboard new` to generate a sample `Whiteboard` file. Edit that file then run `$ whiteboard` to generate your app.
+Run `$ whiteboard new` to generate a sample `Whiteboard` file. Edit that file then run `$ whiteboard run` to generate your Rails app. If you want to see the commands we generate without really running them, run `$ whiteboard run --test`.
 
 ## Example Whiteboard file
 
 ```ruby
 require "whiteboard"
 include Whiteboard
-
-Whiteboard.test_run! # Prints commands without actually running them
 
 # Generate app
 Whiteboard::App.new do

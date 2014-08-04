@@ -8,8 +8,6 @@ module Whiteboard
 require "whiteboard"
 include Whiteboard
 
-Whiteboard.test_run! # Prints commands without actually running them
-
 # Generate app
 Whiteboard::App.new do
   name 'TestApp'                          # the only required field

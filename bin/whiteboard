@@ -16,5 +16,19 @@ when "new"
   File.open('Whiteboard', 'w') { |file| file.write(file_string) }
   puts "Created new Whiteboard file: #{Dir.pwd}/Whiteboard"
 when "run"
-  system "ruby Whiteboard"
+  if ARGV[1] == '--test'
+    puts <<-EOS
+
+Whiteboard (test mode)
+----
+
+Here are the commands this Whiteboard file will run.
+To generate the app for real, run `$ whiteboard run` without --test
+
+    EOS
+    system "ruby Whiteboard --test"
+  else
+    system "ruby Whiteboard"
+  end
+
 end
