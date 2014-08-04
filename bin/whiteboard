@@ -12,9 +12,9 @@ Usage:
   whiteboard run   # => Generates rails app based on your Whiteboard file
   EOS
 when "new"
-  puts "Creating new Whiteboard file: #{Dir.pwd}/Whiteboard"
   system "touch Whiteboard"
   File.open('Whiteboard', 'w') { |file| file.write(file_string) }
+  puts "Created new Whiteboard file: #{Dir.pwd}/Whiteboard"
 when "run"
   system "ruby Whiteboard"
 end
