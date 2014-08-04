@@ -5,9 +5,16 @@ require 'whiteboard/cli'
 include Whiteboard::CLI
 
 case ARGV[0]
+when nil
+  puts <<-EOS
+Usage:
+  whiteboard new   # => Creates new Whiteboard file in current directory
+  whiteboard run   # => Generates rails app based on your Whiteboard file
+  EOS
 when "new"
+  puts "Creating new Whiteboard file: #{Dir.pwd}/Whiteboard"
   system "touch Whiteboard"
   File.open('Whiteboard', 'w') { |file| file.write(file_string) }
-when "run" || "generate" || "g"
+when "run"
   system "ruby Whiteboard"
 end
