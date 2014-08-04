@@ -8,6 +8,10 @@ module Whiteboard
 
   $command_queue = []
 
+  if ARGV[0] == '--test'
+    $test_run = true
+  end
+
   def test_run!
     $test_run = true
   end
