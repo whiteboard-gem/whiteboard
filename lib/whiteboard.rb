@@ -115,6 +115,7 @@ module Whiteboard
 
     def generate_app!
       rails_new!
+      file_and_ignore_whiteboard!
       add_ruby_version! if @ruby_version
       add_ruby_gemset! if @ruby_gemset
       add_gems! if @gemlist
@@ -170,6 +171,11 @@ module Whiteboard
     def install_gems!
       queue_cmd "cd #{$app_name} && spring stop" # Hack to fix spring bug
       queue_cmd "cd #{$app_name} && bundle"
+    end
+    
+    def file_and_ignore_whiteboard!
+      queue_cmd "mv Whiteboard #{@app_name}/Whiteboard"
+      queue_cmd "echo 'Whiteboard' >> #{@app_name}/.gitignore" unless @skip_git == true
     end
   end
 
